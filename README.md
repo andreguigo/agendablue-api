@@ -3,7 +3,7 @@
 O código é um exemplo de CRUD de uma agenda e faz parte do teste da Blue Tecnologia.
 
 ## Construção
----
+
 ### Pré requisitos
 * .Net 6
 * AutoMapper 12
@@ -33,3 +33,7 @@ update-database
 
 ##### Endpoints da API
 Os endpoints e requisitos de chamadas estão especificados na documentação `Swagger` contida na aplicação.
+
+##### Cobertura de testes
+Testes criados com `XUnit` com `Moq` no projeto `AgendaBlueTeste` da mesma solução.
+- Exemplo de execução de teste na classe `TestesControlador` para testar o controller da API.

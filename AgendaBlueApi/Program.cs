@@ -7,6 +7,8 @@ using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddCors();
+
 // Add services to the container.
 var stringConexao = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<AgendaContext>(options =>
@@ -39,6 +41,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "AgendaBlue.API v1"));
 }
+
+app.UseCors(option => option.AllowAnyOrigin());
 
 app.MapControllers();
 
